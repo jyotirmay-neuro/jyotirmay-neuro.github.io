@@ -350,5 +350,49 @@ zh-HK: &DEFAULT_ZH_HK
 zh-TW:
   <<: *DEFAULT_ZH_HK
 
+
+# German
+# -----------------
+de: &DEFAULT_DE
+  page                       : "Seite"
+  pagination_previous        : "Vorherige"
+  pagination_next            : "Nächste"
+  breadcrumb_home_label      : "Startseite"
+  breadcrumb_separator       : "/"
+  toc_label                  : "Auf dieser Seite"
+  ext_link_label             : "Direktlink"
+  less_than                  : "weniger als"
+  minute_read                : "Minuten Lesezeit"
+  share_on_label             : "Teilen auf"
+  meta_label                 : "Meta"
+  tags_label                 : "Stichworte:"
+  categories_label           : "Kategorien:"
+  date_label                 : "Veröffentlicht:"
+  comments_label             : "Einen Kommentar hinterlassen"
+  comments_title             : "Kommentare"
+  more_label                 : "Mehr erfahren"
+  related_label              : "Das könnte Ihnen auch gefallen"
+  follow_label               : "Folgen:"
+  feed_label                 : "Feed"
+  powered_by                 : "Bereitgestellt von"
+  website_label              : "Webseite"
+  email_label                : "E-Mail"
+  recent_posts               : "Neueste Beiträge"
+  undefined_wpm              : "Undefinierter Parameter words_per_minute in _config.yml"
+  comment_form_info          : "Ihre E-Mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind markiert"
+  comment_form_comment_label : "Kommentar"
+  comment_form_md_info       : "Markdown wird unterstützt."
+  comment_form_name_label    : "Name"
+  comment_form_email_label   : "E-Mail-Adresse"
+  comment_form_website_label : "Webseite (optional)"
+  comment_btn_submit         : "Kommentar absenden"
+  comment_btn_submitted      : "Eingereicht"
+  comment_success_msg        : "Vielen Dank für Ihren Kommentar! Er wird auf der Seite angezeigt, sobald er genehmigt wurde."
+  comment_error_msg          : "Entschuldigung, es gab einen Fehler bei Ihrer Einsendung. Bitte stellen Sie sicher, dass alle erforderlichen Felder ausgefüllt sind und versuchen Sie es erneut."
+  loading_label              : "Laden..."
+defr-DE:
+  <<: *DEFAULT_DE
+
+
 # Another locale
 # --------------
