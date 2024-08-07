@@ -10,7 +10,7 @@ main:
   #   url: /portfolio/
   
   # - title: "Expressions"
-  #   url: /post-archive/
+  #   url: /year-archive/
 
   # - title: "Publications"
   #   url: /publications/
@@ -18,8 +18,5 @@ main:
   - title: "CV"
     url: /files/CV.pdf
   
-  # - title: "Blogs"
-  #   url: /year-archive/
-    
   # - title: "Guide"
   #   url: /markdown/
