@@ -1,8 +1,8 @@
 ---
-permalink: /about/
+permalink: /about
 title: "About"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about.html
 ---
 
