@@ -10,7 +10,7 @@ Hi! I’m Jyotirmay Srivastava, a recent post-graduate and researcher dedicated 
 
 Academic Journey So Far..
 ======
-My research journey began at the Indian Institute of Science Education and Research (IISER) Thiruvananthapuram, where I first started working in **Thakur Neurodegeneration Lab**. This experience laid the groundwork for my skills and knowledge of neurobiology and experimental research. I worked with a chronic mouse model of Parkinson's Disease to study neurodegeneration and evaluate the therapeutic potential of autophagy modulators. Along the way, I gained experience with various techniques and working with mice.
+My research journey began at the Indian Institute of Science Education and Research (IISER) Thiruvananthapuram, where I first started working in Thakur Neurodegeneration Lab. This experience laid the groundwork for my skills and knowledge of neurobiology and experimental research. I worked with a chronic mouse model of Parkinson's Disease to study neurodegeneration and evaluate the therapeutic potential of autophagy modulators. Along the way, I gained experience with various techniques and working with mice.
 
 In addition to my experimental skills, I integrated my love for computer science into my research. I taught myself machine learning techniques and developed a GUI-enabled tool for automating the cylinder test used to estimate unilateral degenerative pathology. This combination of experimental and computational approaches is a hallmark of my research philosophy, which I hope will enable me to not only generate high-quality data but also extract detailed insights that might otherwise be overlooked.
 
