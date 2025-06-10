@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate-blog-data && vite build",
+    "build": "npm run generate-content-data && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "generate-blog-data": "node scripts/generateBlogData.js"
+    "generate-content-data": "node scripts/generateContentData.js"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",

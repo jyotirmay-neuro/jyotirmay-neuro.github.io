@@ -1,15 +1,17 @@
-# Markdown Blog System Guide
+# Website Content Management Guide
 
 ## 🎉 New Markdown-Based Content System
 
-Your website now supports **markdown files** for easy content management! No more editing TypeScript files - just write markdown and push to GitHub.
+Your website now uses **markdown files** for easy management of all primary textual content! This includes blog posts, journey updates, and static pages like "About Me" and "Curriculum Vitae". No more editing TypeScript files for these sections - just write markdown and push to GitHub.
 
-## 📁 New Folder Structure
+## 📁 Folder Structure
 
+All content is managed within the `content/` directory:
 ```
 content/
 ├── blog/           # Your blog posts (markdown files)
-└── journey/        # Your journey updates (markdown files)
+├── journey/        # Your journey updates (markdown files)
+└── pages/          # Static pages like About, CV (markdown files)
 
 public/
 └── images/         # All your images
@@ -31,6 +33,7 @@ title: "Revolutionary Machine Learning Breakthrough"
 category: "machine-learning"
 tags: ["AI", "research", "breakthrough", "ML"]
 excerpt: "Discover how our latest research is changing the landscape of machine learning applications in scientific discovery."
+date: "2023-10-26" # Optional: YYYY-MM-DD format. If omitted, uses git commit date.
 ---
 
 # Revolutionary Machine Learning Breakthrough
@@ -70,7 +73,7 @@ Each blog post **must** have frontmatter (the section between `---`):
 - `category`: Category ID like "machine-learning", "data-science" (required)
 - `tags`: Array of tags for SEO (optional)
 - `excerpt`: Brief summary for listings (optional - auto-generated if missing)
-- `date`: Publication date (optional - uses git commit date if missing)
+- `date`: Publication date in YYYY-MM-DD format (optional - uses git commit date if missing)
 
 ### 3. Categories
 
@@ -93,8 +96,9 @@ Create `.md` files in `content/journey/` folder:
 ```markdown
 ---
 title: "Delivered Keynote at AI Conference"
-type: "image-text"
-image: "/images/journey/conference-photo.jpg"
+type: "image-text" # Can be "text" or "image-text"
+image: "/images/journey/conference-photo.jpg" # Required if type is "image-text"
+date: "2023-09-15" # Optional: YYYY-MM-DD format. If omitted, uses git commit date.
 ---
 
 Had the honor of delivering the opening keynote at the International AI Conference in Boston. 
@@ -112,13 +116,46 @@ Looking forward to the collaborations that will emerge from this event!
 ### Journey Frontmatter
 - `title`: Update title (required)
 - `type`: Either "text" or "image-text" (optional, defaults to "text")
-- `image`: Image path if type is "image-text" (optional)
-- `date`: Date (optional - uses git commit date)
+- `image`: Image path if type is "image-text" (optional, required if type is "image-text")
+- `date`: Date in YYYY-MM-DD format (optional - uses git commit date if missing)
+
+## 📄 Managing Static Pages (About, CV, etc.)
+
+Static pages like "About Me" and "Curriculum Vitae" are also managed via Markdown files in the `content/pages/` directory.
+
+### Example for `content/pages/about.md`:
+```markdown
+---
+title: "About Me"
+---
+
+## My Research Philosophy
+My work is driven by a curiosity to understand complex systems and to develop innovative solutions that can make a tangible impact on the world. I am committed to rigorous methodologies, open collaborations, and the dissemination of research findings to the broader scientific community.
+
+## Current Research Focus
+My current research centers on the following key areas:
+
+*   **Machine Learning and Artificial Intelligence:** Exploring novel algorithms and models.
+*   **Quantum Computing:** Investigating quantum mechanics for computation.
+*   **Bioinformatics:** Applying computational techniques to biological data.
+```
+
+### Example for `content/pages/cv.md`:
+```markdown
+---
+title: "Curriculum Vitae"
+description: "My complete academic and professional background"
+---
+
+My CV should have opened in a new tab. If it didn't, you can download it directly using the button below.
+```
+
+The main content area of these pages will be rendered from the Markdown you provide. Some complex interactive elements or specific structural sections (like the "Key Highlights" grid on the About page, or the PDF download button and CV highlights on the CV page) might still be part of the underlying React component, but the primary textual content is now driven by these Markdown files.
 
 ## 🖼️ Image Management
 
 ### Automatic Image Resizing
-All images are **automatically resized** and optimized! No need to manually resize.
+All images in `public/images/` are **automatically resized** and optimized during the build process! No need to manually resize.
 
 ### Profile Picture
 - Save as: `public/images/profile.jpg`
@@ -159,24 +196,26 @@ git commit -m "Update blog content"
 git push origin main
 npm run deploy
 ```
+_The `npm run deploy` command builds your site and pushes it to the `gh-pages` branch._
 
 ## 📅 Automatic Dates
 
-**Publication dates are automatically set** based on your git commit timestamp! 
-
-- First commit = publication date
-- No need to manually set dates
-- Dates are in YYYY-MM-DD format
+Publication dates for blog posts and journey updates can be **automatically set** based on your git commit timestamp if the `date` field is omitted from the frontmatter.
+- The date of the first commit that includes the file will be used as its publication date.
+- If you want to specify a date, use YYYY-MM-DD format in the `date` frontmatter field.
 
 ## 🔧 Build Process
 
-The system automatically:
-1. **Reads** all markdown files from `content/` folders
-2. **Converts** markdown to HTML
-3. **Calculates** reading time
-4. **Extracts** git commit dates
-5. **Generates** category data
-6. **Creates** the data files your website uses
+The website uses a script (`scripts/generateContentData.js`) that automatically:
+1. **Reads** all markdown files from `content/blog/`, `content/journey/`, and `content/pages/`.
+2. **Converts** markdown content to HTML.
+3. **Extracts** frontmatter (titles, dates, categories, tags, excerpts, descriptions).
+4. **Calculates** reading time for blog posts.
+5. **Uses** git commit dates if dates are not specified in frontmatter.
+6. **Generates** category data for blog posts.
+7. **Creates** TypeScript data files (`src/data/*.ts`) that your website uses to display content.
+
+This process runs automatically when you build the site (e.g., during `npm run build` or `npm run deploy`).
 
 ## 📝 Content Tips
 
@@ -203,7 +242,12 @@ The system automatically:
 
 `inline code`
 
-```code block```
+\`\`\`javascript
+// code block
+function greet() {
+  console.log("Hello!");
+}
+\`\`\`
 ```
 
 ### SEO Best Practices
@@ -215,23 +259,27 @@ The system automatically:
 
 ## 🎯 Quick Start Checklist
 
-1. ✅ **Replace example content**:
-   - Delete `content/blog/welcome-to-my-blog.md`
-   - Delete `content/journey/website-launch.md`
+1. ✅ **Review and update static pages**:
+   - `content/pages/about.md` (update with your information)
+   - `content/pages/cv.md` (the content here is minimal, but ensure title/description are as you like)
 
-2. ✅ **Add your profile picture**:
+2. ✅ **Replace example content**:
+   - Delete `content/blog/welcome-to-my-blog.md` (or edit it to be your first post)
+   - Delete `content/journey/website-launch.md` (or edit it)
+
+3. ✅ **Add your profile picture**:
    - Save as `public/images/profile.jpg`
 
-3. ✅ **Write your first blog post**:
+4. ✅ **Write your first actual blog post** (if you edited the example, you're set for now):
    - Create `content/blog/your-first-post.md`
 
-4. ✅ **Add a journey update**:
+5. ✅ **Add an initial journey update**:
    - Create `content/journey/your-first-update.md`
 
-5. ✅ **Deploy**:
+6. ✅ **Deploy**:
    ```bash
    git add .
-   git commit -m "Add my content"
+   git commit -m "Initial content setup"
    git push origin main
    npm run deploy
    ```
