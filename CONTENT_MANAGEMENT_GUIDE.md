@@ -1,3 +1,5 @@
+**DEPRECATED:** This guide describes an old content management system. Please refer to the new [WEBSITE_CONTENT_GUIDE.md](./WEBSITE_CONTENT_GUIDE.md) for current instructions on managing website content using Markdown.
+
 # Website Content Management Guide
 
 ## 📁 File Structure Overview
