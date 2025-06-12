@@ -20,7 +20,7 @@ const Journey: React.FC = () => {
         <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-300 hidden lg:block"></div>
         
         <div className="space-y-12">
-          {journeyPosts.map((post, index) => (
+          {journeyPosts.map((post) => (
             <div key={post.id} className="relative">
               {/* Timeline dot */}
               <div className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg hidden lg:block"></div>

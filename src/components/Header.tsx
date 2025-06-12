@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, User } from 'lucide-react';
+import { Menu, User } from 'lucide-react';
 import MobileSidebar from './MobileSidebar';
 
 const Header: React.FC = () => {
@@ -31,6 +31,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="lg:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors"
+              aria-label="Open navigation menu"
             >
               <Menu className="w-6 h-6" />
             </button>

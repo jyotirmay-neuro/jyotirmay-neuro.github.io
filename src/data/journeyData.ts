@@ -13,7 +13,7 @@ export interface JourneyPost {
 export const journeyPosts: JourneyPost[] = [
   {
     "id": "1",
-    "date": "2025-06-10",
+    "date": "2025-06-12",
     "type": "text",
     "title": "Started My Research Website",
     "content": "Excited to launch my new research website! This platform will help me share my work, connect with fellow researchers, and document my academic journey.\n\nLooking forward to sharing insights from my research in computational science and machine learning."

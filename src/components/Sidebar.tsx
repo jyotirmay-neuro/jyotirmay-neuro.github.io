@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  User, 
   GraduationCap, 
   Mail, 
   Github, 
