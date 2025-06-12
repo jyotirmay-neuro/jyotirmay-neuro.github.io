@@ -7,17 +7,19 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string;
-  category: string;
+  category: string; // ID of the category
   tags: string[];
   date: string;
   readTime: string;
+  // The 'image' field from frontmatter, if present, is used for the category image.
+  // It's not directly part of BlogPost to avoid redundancy, but influences BlogCategory.
 }
 
 export interface BlogCategory {
-  id: string;
-  name: string;
+  id: string; // e.g., 'general', 'tech-deep-dive'
+  name: string; // e.g., 'General', 'Tech Deep Dive'
   description: string;
-  image: string;
+  image: string; // URL to an image (from post frontmatter or default)
   postCount: number;
 }
 
@@ -34,7 +36,7 @@ export const blogPosts: BlogPost[] = [
       "research",
       "introduction"
     ],
-    "date": "2025-06-10",
+    "date": "2025-06-12",
     "readTime": "1 min read"
   }
 ];

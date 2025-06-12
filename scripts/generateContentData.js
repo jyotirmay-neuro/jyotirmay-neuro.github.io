@@ -13,17 +13,30 @@ const PAGES_DIR = 'content/pages';
 const OUTPUT_DIR = 'src/data';
 
 // Ensure output directory exists
-if (!fs.existsSync(OUTPUT_DIR)) {
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+try {
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    console.log(`[generateContentData] INFO: Output directory ${OUTPUT_DIR} not found, creating...`);
+    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+    console.log(`[generateContentData] INFO: Output directory ${OUTPUT_DIR} created successfully.`);
+  }
+} catch (error) {
+  console.error(`[generateContentData] ERROR: Failed to create output directory ${OUTPUT_DIR}. Error: ${error.message}`);
+  // If we can't create the output directory, it's a critical error.
+  process.exit(1);
 }
 
 // --- Helper Functions ---
 function getGitCommitDate(filePath) {
   try {
     const gitDate = execSync(`git log -1 --format=%ci "${filePath}"`, { encoding: 'utf8' }).trim();
-    return gitDate ? new Date(gitDate).toISOString().split('T')[0] : new Date().toISOString().split('T')[0];
+    if (gitDate) {
+      return new Date(gitDate).toISOString().split('T')[0];
+    } else {
+      console.warn(`[generateContentData] WARN: No git commit date found for ${filePath}. Using current date.`);
+      return new Date().toISOString().split('T')[0];
+    }
   } catch (error) {
-    // If git command fails (e.g., file not committed yet), use current date
+    console.error(`[generateContentData] ERROR: Failed to get git commit date for ${filePath}. Error: ${error.message}. Using current date.`);
     return new Date().toISOString().split('T')[0];
   }
 }
@@ -52,39 +65,52 @@ function processMarkdownDirectory(directoryPath, itemProcessor, options = {}) {
     exampleFileName
   } = options;
 
-  if (!fs.existsSync(directoryPath)) {
-    if (createExampleMarkerPath && exampleFileContent && exampleFileName && !fs.existsSync(createExampleMarkerPath)) {
-      console.log(`${directoryNameForLogging} directory not found, creating with example...`);
-      fs.mkdirSync(directoryPath, { recursive: true });
-      fs.writeFileSync(path.join(directoryPath, exampleFileName), exampleFileContent);
-      fs.writeFileSync(createExampleMarkerPath, ''); // Create marker file
-      console.log(`Created example ${directoryNameForLogging.toLowerCase()} file (${exampleFileName}) and marker file (${createExampleMarkerPath}).`);
-    } else if (createExampleMarkerPath && fs.existsSync(createExampleMarkerPath)) {
-      // If marker exists, it means we've created the example before, and user might have deleted the dir.
-      console.log(`${directoryNameForLogging} directory not found, but .example-created marker exists. Skipping example creation.`);
-      return []; // Return empty as directory doesn't exist now
-    } else {
-      // For directories like 'pages' where no example creation is defined
-      console.log(`${directoryNameForLogging} directory not found. Skipping ${directoryNameForLogging.toLowerCase()} generation.`);
-      return [];
+  try {
+    if (!fs.existsSync(directoryPath)) {
+      if (createExampleMarkerPath && exampleFileContent && exampleFileName && !fs.existsSync(createExampleMarkerPath)) {
+        console.log(`[generateContentData] INFO: ${directoryNameForLogging} directory (${directoryPath}) not found. Creating with example content as a first-time setup.`);
+        fs.mkdirSync(directoryPath, { recursive: true }); // This was already here, ensure it's caught by the main try...catch
+        console.log(`[generateContentData] INFO: Created directory: ${directoryPath}`);
+        fs.writeFileSync(path.join(directoryPath, exampleFileName), exampleFileContent); // Also ensure caught
+        console.log(`[generateContentData] INFO: Created example file: ${path.join(directoryPath, exampleFileName)}`);
+        fs.writeFileSync(createExampleMarkerPath, `Created on: ${new Date().toISOString()}`); // Create marker file with timestamp
+        console.log(`[generateContentData] INFO: Created marker file: ${createExampleMarkerPath}. This indicates that an example was created. If you delete this marker and the directory, it will be recreated.`);
+        console.log(`[generateContentData] INFO: Example ${directoryNameForLogging.toLowerCase()} content generated in ${directoryPath}. You can modify or delete these examples as needed.`);
+      } else if (createExampleMarkerPath && fs.existsSync(createExampleMarkerPath)) {
+        console.warn(`[generateContentData] WARN: ${directoryNameForLogging} directory (${directoryPath}) not found, but an '.example-created' marker exists. This might mean the directory was intentionally deleted. Skipping example creation. To recreate example content, remove the marker file: ${createExampleMarkerPath} and run this script again.`);
+        return [];
+      } else {
+        console.warn(`[generateContentData] WARN: ${directoryNameForLogging} directory (${directoryPath}) not found. No example creation configured for this directory. Skipping ${directoryNameForLogging.toLowerCase()} content generation.`);
+        return [];
+      }
     }
-  }
 
-  const files = fs.readdirSync(directoryPath).filter(file => file.endsWith('.md'));
-  const items = [];
+    const files = fs.readdirSync(directoryPath).filter(file => file.endsWith('.md'));
+    console.log(`[generateContentData] INFO: Found ${files.length} markdown files in ${directoryPath}.`);
+    const items = [];
 
-  files.forEach((file, index) => {
-    const filePath = path.join(directoryPath, file);
-    const fileContent = fs.readFileSync(filePath, 'utf8');
-    const { data: frontmatter, content } = matter(fileContent);
-    // Pass necessary context or arguments to itemProcessor if it needs them
-    const item = itemProcessor(file, filePath, frontmatter, content, index);
+    files.forEach((file, index) => {
+      const filePath = path.join(directoryPath, file);
+      let fileContent;
+      try {
+        fileContent = fs.readFileSync(filePath, 'utf8');
+      } catch (readError) {
+        console.error(`[generateContentData] ERROR: Failed to read file ${filePath}. Error: ${readError.message}. Skipping this file.`);
+        return; // Skip this file
+      }
+      const { data: frontmatter, content } = matter(fileContent);
+      // Pass necessary context or arguments to itemProcessor if it needs them
+      const item = itemProcessor(file, filePath, frontmatter, content, index);
     if (item) {
         items.push(item);
     }
   });
 
   return items;
+} catch (error) {
+    console.error(`[generateContentData] ERROR: Failed to process markdown directory ${directoryPath}. Error: ${error.message}`);
+    return [];
+  }
 }
 
 // --- Item Processors ---
@@ -92,7 +118,7 @@ function processMarkdownDirectory(directoryPath, itemProcessor, options = {}) {
 // Added 'categoriesMap' as an argument to be passed by processBlogPosts
 function blogItemProcessor(file, filePath, frontmatter, content, index, categoriesMap) {
   const slug = generateSlug(file);
-  const gitDate = getGitCommitDate(filePath);
+  const gitDate = getGitCommitDate(filePath); // Already wrapped
   const stats = readingTime(content);
   const htmlContent = marked(content);
 
@@ -105,18 +131,33 @@ function blogItemProcessor(file, filePath, frontmatter, content, index, categori
     category: frontmatter.category || 'general',
     tags: frontmatter.tags || [],
     date: frontmatter.date || gitDate,
-    readTime: stats.text
+    readTime: stats.text,
+    // image field from frontmatter will be used for category image if present
   };
 
   const categoryId = post.category;
+  // Handle category image - use frontmatter image if available, otherwise default
+  // The image from the first post encountered for a category will be used.
+  const categoryImage = frontmatter.image || `https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600`;
+
   if (!categoriesMap.has(categoryId)) {
     categoriesMap.set(categoryId, {
       id: categoryId,
       name: categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
       description: `Posts about ${categoryId.replace('-', ' ')}`,
-      image: `https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600`,
+      image: categoryImage, // Use the determined image
       postCount: 0
     });
+    console.log(`[generateContentData] INFO: Created new category '${categoryId}' with image '${categoryImage}'.`);
+  } else {
+    // If category exists, we use the image from the first post that defined it.
+    // For simplicity, we don't update it if subsequent posts have different images for the same category.
+    // A more complex logic could be implemented here if needed (e.g., use image from most recent post).
+    // We could log if a different image is found for an existing category:
+    const existingCategory = categoriesMap.get(categoryId);
+    if (frontmatter.image && existingCategory.image !== frontmatter.image) {
+      console.log(`[generateContentData] INFO: Category '${categoryId}' already exists with image '${existingCategory.image}'. A different image '${frontmatter.image}' was found in post '${post.title}' but the first one encountered is kept.`);
+    }
   }
   categoriesMap.get(categoryId).postCount++;
   return post;
@@ -226,17 +267,19 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string;
-  category: string;
+  category: string; // ID of the category
   tags: string[];
   date: string;
   readTime: string;
+  // The 'image' field from frontmatter, if present, is used for the category image.
+  // It's not directly part of BlogPost to avoid redundancy, but influences BlogCategory.
 }
 
 export interface BlogCategory {
-  id: string;
-  name: string;
+  id: string; // e.g., 'general', 'tech-deep-dive'
+  name: string; // e.g., 'General', 'Tech Deep Dive'
   description: string;
-  image: string;
+  image: string; // URL to an image (from post frontmatter or default)
   postCount: number;
 }
 
@@ -244,8 +287,12 @@ export const blogPosts: BlogPost[] = ${JSON.stringify(blogPosts, null, 2)};
 
 export const blogCategories: BlogCategory[] = ${JSON.stringify(blogCategories, null, 2)};
 `;
-
-fs.writeFileSync(path.join(OUTPUT_DIR, 'blogData.ts'), blogDataContent);
+try {
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'blogData.ts'), blogDataContent);
+  console.log(`[generateContentData] INFO: Successfully wrote blog data to ${path.join(OUTPUT_DIR, 'blogData.ts')}`);
+} catch (error) {
+  console.error(`[generateContentData] ERROR: Failed to write blog data to ${path.join(OUTPUT_DIR, 'blogData.ts')}. Error: ${error.message}`);
+}
 
 // Write journeyData.ts
 const journeyDataContent = `// This file is auto-generated from markdown files in content/journey/
@@ -262,8 +309,12 @@ export interface JourneyPost {
 
 export const journeyPosts: JourneyPost[] = ${JSON.stringify(journeyPosts, null, 2)};
 `;
-
-fs.writeFileSync(path.join(OUTPUT_DIR, 'journeyData.ts'), journeyDataContent);
+try {
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'journeyData.ts'), journeyDataContent);
+  console.log(`[generateContentData] INFO: Successfully wrote journey data to ${path.join(OUTPUT_DIR, 'journeyData.ts')}`);
+} catch (error) {
+  console.error(`[generateContentData] ERROR: Failed to write journey data to ${path.join(OUTPUT_DIR, 'journeyData.ts')}. Error: ${error.message}`);
+}
 
 // Write pageData.ts
 const pageDataContent = `// This file is auto-generated from markdown files in content/pages/
@@ -278,8 +329,12 @@ export interface Page {
 
 export const pages: Page[] = ${JSON.stringify(pagesData, null, 2)};
 `;
+try {
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'pageData.ts'), pageDataContent);
+  console.log(`[generateContentData] INFO: Successfully wrote page data to ${path.join(OUTPUT_DIR, 'pageData.ts')}`);
+} catch (error) {
+  console.error(`[generateContentData] ERROR: Failed to write page data to ${path.join(OUTPUT_DIR, 'pageData.ts')}. Error: ${error.message}`);
+}
 
-fs.writeFileSync(path.join(OUTPUT_DIR, 'pageData.ts'), pageDataContent);
-
-console.log(`✅ Generated ${blogPosts.length} blog posts, ${journeyPosts.length} journey posts, and ${pagesData.length} pages.`);
-console.log(`✅ Found ${blogCategories.length} blog categories`);
+console.log(`[generateContentData] ✅ Generation Complete: ${blogPosts.length} blog posts, ${journeyPosts.length} journey posts, and ${pagesData.length} pages processed.`);
+console.log(`[generateContentData] ✅ Found ${blogCategories.length} blog categories. Check ${OUTPUT_DIR} for generated TypeScript data files.`);
