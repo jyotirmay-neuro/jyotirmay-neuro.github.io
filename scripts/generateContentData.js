@@ -1,10 +1,11 @@
 import fs from 'fs';
-console.log("Attempting to refactor generateContentData.js"); // Test line
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 import readingTime from 'reading-time';
 import { execSync } from 'child_process';
+
+console.log("Attempting to refactor generateContentData.js"); // Test line
 
 const BLOG_DIR = 'content/blog';
 const JOURNEY_DIR = 'content/journey';
