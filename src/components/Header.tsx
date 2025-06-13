@@ -39,7 +39,7 @@ const Header: React.FC = () => {
             {/* Desktop Name */}
             <Link to="/" className="hidden lg:block">
               <h1 className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-                Dr. Academic Name
+                Jyotirmay Srivastava
               </h1>
             </Link>
 
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
                 <User className="w-4 h-4 text-white" />
               </div>
-              <span className="text-lg font-bold text-gray-900">Dr. Academic</span>
+              <span className="text-lg font-bold text-gray-900">Jyotirmay</span>
             </Link>
 
             {/* Navigation */}

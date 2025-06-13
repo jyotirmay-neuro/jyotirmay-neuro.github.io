@@ -9,22 +9,17 @@ const About: React.FC = () => {
     {
       icon: <GraduationCap className="w-6 h-6" />,
       title: 'Educational Background',
-      description: 'Ph.D. in Computational Sciences from Stanford University, M.S. in Computer Science from MIT'
+      description: 'MS (Research) in Biological Sciences, IISER Thiruvananthapura, India; focus on Neuroscience'
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: 'Research Excellence',
-      description: '50+ peer-reviewed publications, 3 best paper awards, h-index of 35'
+      title: 'Research Fellowship',
+      description: 'Cleared DBT BET 2023 under Category-I and received DBT - Junior Research Fellowship'
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Collaboration',
-      description: 'International research collaborations with 20+ institutions across 5 continents'
-    },
-    {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: 'Teaching Impact',
-      description: 'Mentored 25+ graduate students, University Teaching Excellence Award recipient'
+      icon: <Award className="w-6 h-6" />,
+      title: 'Award',
+      description: 'Received Parkinson\'s Foundation Visiting Scholar Award 2024 for research on Parkinson’s disease'
     }
   ];
 

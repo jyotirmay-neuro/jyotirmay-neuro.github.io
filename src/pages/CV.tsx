@@ -78,18 +78,16 @@ const CV: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-6 text-left">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-2">Education</h3>
-              <p className="text-gray-600 text-sm">Ph.D. Computational Sciences, Stanford University</p>
-              <p className="text-gray-600 text-sm">M.S. Computer Science, MIT</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Research</h3>
-              <p className="text-gray-600 text-sm">50+ peer-reviewed publications</p>
-              <p className="text-gray-600 text-sm">H-index: 35</p>
+              <p className="text-gray-600 text-sm">MS (Research) Biological Sciences, IISER Thiruvananthapuram, India</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-2">Recognition</h3>
-              <p className="text-gray-600 text-sm">Teaching Excellence Award</p>
-              <p className="text-gray-600 text-sm">3 Best Paper Awards</p>
+              <p className="text-gray-600 text-sm">DBT - Junior Research Fellowship</p>
+              <p className="text-gray-600 text-sm">Parkinson's Foundation Visiting Research Award</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="font-semibold text-gray-900 mb-2">Courses</h3>
+              <p className="text-gray-600 text-sm">Computational Neuroscience and NeuroAI, Neuromatch Academy</p>
             </div>
           </div>
         </div>

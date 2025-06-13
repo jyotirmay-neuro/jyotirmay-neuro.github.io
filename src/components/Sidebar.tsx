@@ -81,11 +81,8 @@ const Sidebar: React.FC = () => {
 
         {/* Name and Title */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Dr. Academic Name</h1>
-          <p className="text-lg text-gray-700 mb-3">Research Scientist</p>
-          <p className="text-sm text-gray-600 italic">
-            "Advancing knowledge through computational innovation and interdisciplinary research"
-          </p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Jyotirmay Srivastava</h1>
+          <p className="text-lg text-gray-700 mb-3">Neuroscience Researcher</p>
         </div>
 
         {/* Social Links */}

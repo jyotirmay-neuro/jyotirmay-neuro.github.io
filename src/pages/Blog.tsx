@@ -10,9 +10,9 @@ const Blog: React.FC = () => {
     <div className="max-w-6xl mx-auto">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Research Blog</h1>
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Personal Blog</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Sharing insights, discoveries, and thoughts on computational science, AI, and interdisciplinary research
+          Sharing my thought, insights from my readings and research in neurosciences (and, more broadly, biological sciences), and recommendations of books/shows/movies.
         </p>
         <div className="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
       </div>

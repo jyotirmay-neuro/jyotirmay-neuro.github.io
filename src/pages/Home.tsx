@@ -17,10 +17,9 @@ const Home: React.FC = () => {
             Welcome to My Research Journey
           </h1>
           <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-            I'm a computational scientist passionate about advancing knowledge through interdisciplinary research. 
-            My work spans machine learning, computational biology, and quantum computing, with a focus on developing 
-            innovative solutions to complex scientific challenges. I believe in the power of collaboration and 
-            open science to drive meaningful progress.
+            I am a neuroscientist passionate about understanding the brain through interdisciplinary research.
+            My work integrates experimental neurobiology with computational techniques to develop novel insights into neural function.
+            I believe that a collaborative and open approach is fundamental to solving the most challenging questions in our field.
           </p>
           <Link
             to="/about"
