@@ -26,26 +26,26 @@ export interface BlogCategory {
 export const blogPosts: BlogPost[] = [
   {
     "id": "1",
-    "slug": "welcome-to-my-blog",
-    "title": "Welcome to My Research Blog",
-    "excerpt": "Welcome to my research blog where I share insights, discoveries, and thoughts on computational science and interdisciplinary research.",
-    "content": "<h1>Welcome to My Research Blog</h1>\n<p>This is my first blog post! I&#39;m excited to share my research journey with you.</p>\n<h2>What You&#39;ll Find Here</h2>\n<ul>\n<li>Research insights and discoveries</li>\n<li>Computational science tutorials</li>\n<li>Thoughts on interdisciplinary collaboration</li>\n<li>Updates from my academic journey</li>\n</ul>\n<h2>Getting Started</h2>\n<p>To add new blog posts, simply create markdown files in the <code>content/blog/</code> directory. Each post should have frontmatter with title, category, tags, and excerpt.</p>\n<h2>Images in Posts</h2>\n<p>You can add images to your posts like this:</p>\n<p><img src=\"https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800\" alt=\"Research Setup\"></p>\n<p>Or reference local images from your <code>public/images/blog/</code> folder:</p>\n<pre><code class=\"language-markdown\">![My Research](../public/images/blog/my-research.jpg)\n</code></pre>\n<p>Happy reading!</p>\n",
-    "category": "general",
+    "slug": "2024-09-06-post1",
+    "title": "Tips #1 : Structuring Queries in Google/Scholar",
+    "excerpt": "\r\nHello! I recently created this website, inspired by some of the amazing sites of fellow attendees at [Neuromatch](https://neuromatch.io/neuroscience/) Academy’s NeuroAI School 2024. After setting it...",
+    "content": "<p>Hello! I recently created this website, inspired by some of the amazing sites of fellow attendees at <a href=\"https://neuromatch.io/neuroscience/\">Neuromatch</a> Academy’s NeuroAI School 2024. After setting it up with an About section and social links, it felt a bit empty. So, I’m adding this “mini blog” section where I’ll share useful things I learn along my academic journey, tips for research, book/movie recommendations, and other interesting things.\nHere we go…</p>\n<p>One thing that has significantly improved my literature searches is using structured queries in Google and Google Scholar. In the past, I’d just throw all my keywords into a search bar, hoping for the best. But after discovering search operators, I can’t imagine searching without them. They’ve saved me countless hours, helping me quickly find relevant publications without sifting through irrelevant results or chasing down endless citation trails. Now, obviously, a lot of people already know this! But many of us don’t. This is especially true for undergrad students and interns. So this is for all of us folks who are just starting out.</p>\n<h2>What are search operators?</h2>\n<p>Search operators are symbols or words used in search engines to refine and target your search results. They help you narrow down results, making your searches faster and more effective.</p>\n<pre><code class=\"language-markdown\">![My Research](../public/images/blog/Blog1-Search-Operators.jpg)\n</code></pre>\n<p>The image above shows the operators I use most often, along with examples and explanations. It’s usually best to start with simple keywords and basic operators, then gradually refine your search to get more precise results.\nI hear you thinking “It’s all very cool and all, but is it really going to be useful enough to make the exercise worth it?”. Believe me, It Does! In the beginning, while you are trying to get the hang of it, it might seem like it’s worse than simply using the keywords, but you will be thankful for knowing this when you are trying to frantically find that one reference you need to cite in support of a statement, or quickly sift through literature while preparing for Journal Club.\nHere are some queries I have used recently while preparing applications for PhD positions:\n1.\t(&quot;perineuronal nets&quot; OR tenascin) AND astrocytes AND (ion channels) -microglia –review\n2.\t(RNAseq OR scRNAseq) AND Parkinson&#39;s AND (primate OR human) AND (nigra OR mid*brain) –review\n3.\tLUHMES AND (organoids OR (3D culture)) AND astrocytes AND electrophysiology –review\nHope this comes of use to you all sometime. Thanks for reading, and I would love to connect with you all over twitter or email!</p>\n",
+    "category": "Tips",
     "tags": [
-      "welcome",
-      "research",
-      "introduction"
+      "google scholar",
+      "operators",
+      "structured query"
     ],
-    "date": "2025-06-10",
-    "readTime": "1 min read"
+    "date": "2024-09-06",
+    "readTime": "3 min read"
   }
 ];
 
 export const blogCategories: BlogCategory[] = [
   {
-    "id": "general",
-    "name": "General",
-    "description": "Posts about general",
+    "id": "Tips",
+    "name": "Tips",
+    "description": "Posts about Tips",
     "image": "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600",
     "postCount": 1
   }
