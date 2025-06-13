@@ -39,7 +39,7 @@ const Header: React.FC = () => {
             {/* Desktop Name */}
             <Link to="/" className="hidden lg:block">
               <h1 className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-                Jyotirmay Srivastava
+                Jyotirmay
               </h1>
             </Link>
 
