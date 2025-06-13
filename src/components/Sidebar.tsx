@@ -13,54 +13,54 @@ import ResponsiveImage from './ResponsiveImage';
 
 const Sidebar: React.FC = () => {
   const socialLinks = [
-    {
-      name: 'Google Scholar',
-      icon: <GraduationCap className="w-5 h-5" />,
-      handle: 'scholar.google.com/citations?user=YOUR_ID',
-      url: 'https://scholar.google.com/citations?user=YOUR_ID'
-    },
-    {
-      name: 'ORCID',
-      icon: <Award className="w-5 h-5" />,
-      handle: '0000-0000-0000-0000',
-      url: 'https://orcid.org/0000-0000-0000-0000'
-    },
-    {
-      name: 'ResearchGate',
-      icon: <BookOpen className="w-5 h-5" />,
-      handle: 'researchgate.net/profile/Your-Name',
-      url: 'https://www.researchgate.net/profile/Your-Name'
-    },
-    {
-      name: 'GitHub',
-      icon: <Github className="w-5 h-5" />,
-      handle: '@yourusername',
-      url: 'https://github.com/yourusername'
-    },
-    {
-      name: 'LinkedIn',
-      icon: <Linkedin className="w-5 h-5" />,
-      handle: 'linkedin.com/in/yourname',
-      url: 'https://linkedin.com/in/yourname'
-    },
-    {
-      name: 'Twitter/X',
-      icon: <Twitter className="w-5 h-5" />,
-      handle: '@yourusername',
-      url: 'https://twitter.com/yourusername'
-    },
-    {
-      name: 'Bluesky',
-      icon: <Globe className="w-5 h-5" />,
-      handle: '@yourusername.bsky.social',
-      url: 'https://bsky.app/profile/yourusername.bsky.social'
-    },
-    {
-      name: 'Email',
-      icon: <Mail className="w-5 h-5" />,
-      handle: 'your.email@university.edu',
-      url: 'mailto:your.email@university.edu'
-    }
+      {
+        name: 'Google Scholar',
+        icon: <GraduationCap className="w-4 h-4" />,
+        handle: 'scholar.google.com/citations?user=ZFU7KoYAAAAJ',
+        url: 'https://scholar.google.com/citations?user=ZFU7KoYAAAAJ'
+      },
+      {
+        name: 'ORCID',
+        icon: <Award className="w-4 h-4" />,
+        handle: '0000-0002-6460-9670',
+        url: 'https://orcid.org/0000-0002-6460-9670'
+      },
+      {
+        name: 'ResearchGate',
+        icon: <BookOpen className="w-4 h-4" />,
+        handle: 'researchgate.net/profile/Jyotirmay_Srivastava',
+        url: 'https://www.researchgate.net/profile/Jyotirmay_Srivastava'
+      },
+      {
+        name: 'GitHub',
+        icon: <Github className="w-4 h-4" />,
+        handle: '@jyotirmay-neuro',
+        url: 'https://github.com/jyotirmay-neuro'
+      },
+      {
+        name: 'LinkedIn',
+        icon: <Linkedin className="w-4 h-4" />,
+        handle: 'linkedin.com/in/jyotirmay-srivastava-in',
+        url: 'https://linkedin.com/in/jyotirmay-srivastava-in'
+      },
+      {
+        name: 'Twitter/X',
+        icon: <Twitter className="w-4 h-4" />,
+        handle: '@js_neuro',
+        url: 'https://twitter.com/js_neuro'
+      },
+      {
+        name: 'Bluesky',
+        icon: <Globe className="w-4 h-4" />,
+        handle: '@js-neuro.bsky.social',
+        url: 'https://bsky.app/profile/js-neuro.bsky.social'
+      },
+      {
+        name: 'Email',
+        icon: <Mail className="w-4 h-4" />,
+        handle: 'jyotirmaysrivastava.in@gmail.com',
+        url: 'mailto:jyotirmaysrivastava.in@gmail.com'
+      }
   ];
 
   return (

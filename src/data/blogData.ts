@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
       "research",
       "introduction"
     ],
-    "date": "2025-06-12",
+    "date": "2025-06-10",
     "readTime": "1 min read"
   }
 ];

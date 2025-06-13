@@ -26,50 +26,50 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose, navItems
     {
       name: 'Google Scholar',
       icon: <GraduationCap className="w-4 h-4" />,
-      handle: 'scholar.google.com/citations?user=YOUR_ID',
-      url: 'https://scholar.google.com/citations?user=YOUR_ID'
+      handle: 'scholar.google.com/citations?user=ZFU7KoYAAAAJ',
+      url: 'https://scholar.google.com/citations?user=ZFU7KoYAAAAJ'
     },
     {
       name: 'ORCID',
       icon: <Award className="w-4 h-4" />,
-      handle: '0000-0000-0000-0000',
-      url: 'https://orcid.org/0000-0000-0000-0000'
+      handle: '0000-0002-6460-9670',
+      url: 'https://orcid.org/0000-0002-6460-9670'
     },
     {
       name: 'ResearchGate',
       icon: <BookOpen className="w-4 h-4" />,
-      handle: 'researchgate.net/profile/Your-Name',
-      url: 'https://www.researchgate.net/profile/Your-Name'
+      handle: 'researchgate.net/profile/Jyotirmay_Srivastava',
+      url: 'https://www.researchgate.net/profile/Jyotirmay_Srivastava'
     },
     {
       name: 'GitHub',
       icon: <Github className="w-4 h-4" />,
-      handle: '@yourusername',
-      url: 'https://github.com/yourusername'
+      handle: '@jyotirmay-neuro',
+      url: 'https://github.com/jyotirmay-neuro'
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-4 h-4" />,
-      handle: 'linkedin.com/in/yourname',
-      url: 'https://linkedin.com/in/yourname'
+      handle: 'linkedin.com/in/jyotirmay-srivastava-in',
+      url: 'https://linkedin.com/in/jyotirmay-srivastava-in'
     },
     {
       name: 'Twitter/X',
       icon: <Twitter className="w-4 h-4" />,
-      handle: '@yourusername',
-      url: 'https://twitter.com/yourusername'
+      handle: '@js_neuro',
+      url: 'https://twitter.com/js_neuro'
     },
     {
       name: 'Bluesky',
       icon: <Globe className="w-4 h-4" />,
-      handle: '@yourusername.bsky.social',
-      url: 'https://bsky.app/profile/yourusername.bsky.social'
+      handle: '@js-neuro.bsky.social',
+      url: 'https://bsky.app/profile/js-neuro.bsky.social'
     },
     {
       name: 'Email',
       icon: <Mail className="w-4 h-4" />,
-      handle: 'your.email@university.edu',
-      url: 'mailto:your.email@university.edu'
+      handle: 'jyotirmaysrivastava.in@gmail.com',
+      url: 'mailto:jyotirmaysrivastava.in@gmail.com'
     }
   ];
 
@@ -108,11 +108,8 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose, navItems
             <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
               <User className="w-12 h-12 text-white" />
             </div>
-            <h1 className="text-xl font-bold text-gray-900 mb-1">Dr. Academic Name</h1>
-            <p className="text-sm text-gray-700 mb-2">Research Scientist</p>
-            <p className="text-xs text-gray-600 italic px-2">
-              "Advancing knowledge through computational innovation"
-            </p>
+            <h1 className="text-xl font-bold text-gray-900 mb-1">Jyotirmay Srivastava</h1>
+            <p className="text-sm text-gray-700 mb-2">Neuroscience Researcher</p>
           </div>
 
           {/* Navigation */}

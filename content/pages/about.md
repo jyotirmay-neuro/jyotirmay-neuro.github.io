@@ -2,23 +2,21 @@
 title: "About Me"
 ---
 
-## Research Philosophy
+Hi! I am a recent postgraduate researcher passionate about neuroscience. My work focuses on bridging molecular, systems, and computational approaches to unravel the fundamental principles of neural function. With a strong background in both experimental neurobiology and computational methods, my goal is to contribute to a deeper understanding of the brain's complexities.
 
-I believe in the power of interdisciplinary collaboration and the pursuit of knowledge that transcends traditional boundaries. My work is driven by a curiosity to understand complex systems and to develop innovative solutions that can make a tangible impact on the world. I am committed to rigorous methodologies, open- Kollaborationen, and the dissemination of research findings to the broader scientific community.
+**I am actively seeking PhD positions where I can apply my interdisciplinary skills to investigate key questions in neuroscience.**
 
-## Current Research Focus
+Research Experience and Skills
+======
+My research training began at the Indian Institute of Science Education and Research (IISER) Thiruvananthapuram in the Thakur Neurodegeneration Lab. There, I investigated the mechanisms of neurodegeneration in a chronic mouse model of Parkinson's Disease, focusing on the therapeutic potential of autophagy modulators. This experience provided me with a solid foundation in experimental design and proficiency in techniques such as rodent handling, behavioural assays, and molecular biology protocols.
 
-My current research centers on the following key areas:
+To complement my wet-lab skills, I have independently developed my expertise in computational neuroscience. A notable project involved developing a GUI-enabled tool using machine learning to automate the analysis of the cylinder test, a standard assay for assessing unilateral motor deficits. This project exemplifies my commitment to an integrated research philosophy: leveraging computational tools to extract maximal insight from experimentally-generated data.
 
-*   **Machine Learning and Artificial Intelligence:** Exploring novel algorithms and models for data analysis, pattern recognition, and predictive modeling.
-*   **Quantum Computing:** Investigating the potential of quantum mechanics to revolutionize computation and solve problems currently intractable for classical computers.
-*   **Bioinformatics:** Applying computational techniques to biological data for insights into genomics, proteomics, and systems biology.
-*   **Sustainable Technologies:** Researching and developing new technologies that promote environmental sustainability and address climate change.
+Research Philosophy and Interests
+======
+I believe that the most significant advances in neuroscience will emerge from the intersection of sophisticated experimental techniques and powerful computational analysis. My core research interests lie in understanding how the brain encodes and decodes information, integrates sensory and motor signals to execute precise actions, and generates complex internal states like imagination.
 
-## Professional Journey
+I am a strong advocate for collaborative and open science. I believe that sharing knowledge, mentoring junior colleagues, and engaging in rigorous scientific discourse are essential for both individual growth and the advancement of the field.
 
-My career has been a journey of continuous learning and growth, spanning various roles and institutions. I began as a [Your Early Role] at [Your Early Institution], where I [Briefly describe early responsibilities/achievements]. This was followed by a position as [Your Next Role] at [Your Next Institution], where I focused on [Key responsibilities/achievements]. Currently, as a [Your Current Role] at [Your Current Institution], I am leading initiatives in [Your current focus areas].
 
-## Beyond Research
-
-While research is my primary passion, I also believe in maintaining a balanced life. Outside the lab, I enjoy [Your Hobby 1], [Your Hobby 2], and [Your Hobby 3]. These activities provide me with fresh perspectives and help me recharge for new scientific challenges. I am also a firm believer in mentorship and actively engage in guiding and supporting emerging researchers.
+**Always happy connect with others. Let's have deep discussions about the mysteries of this universe...**
