@@ -1,5 +1,5 @@
 ---
-title: "From Discovery to Synthesis: A Researcher's Toolkit"
+title: "Tips #2: From Discovery to Synthesis: A Researcher's Toolkit"
 category: "Tips & Tricks"
 tags: ["research tools", "literature review", "semantic scholar", "research rabbit", "connected papers", "publish or perish", "notebooklm", "futurehouse", "AI in research", "academic workflow"]
 date: '2025-06-16'
