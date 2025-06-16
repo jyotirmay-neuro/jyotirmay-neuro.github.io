@@ -16,6 +16,6 @@ export const journeyPosts: JourneyPost[] = [
     "date": "2024-09-05",
     "type": "text",
     "title": "Started My Research Website",
-    "content": "Excited to launch my new research website! This platform will help me share my work, connect with fellow researchers, and document my academic journey.\n\nLooking forward to sharing my thought, insights from my readings and research in neurosciences (and, more broadly, biological sciences), and recommendations of books/shows/movies as I encounter more of it."
+    "content": "Excited to launch my new research website! This platform will help me share my work, connect with fellow researchers, and document my academic journey.\r\n\r\nLooking forward to sharing my thought, insights from my readings and research in neurosciences (and, more broadly, biological sciences), and recommendations of books/shows/movies as I encounter more of it."
   }
 ];
