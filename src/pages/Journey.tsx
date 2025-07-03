@@ -45,11 +45,13 @@ const Journey: React.FC = () => {
                   {/* Image (if exists) */}
                   {post.imagePath && (
                     <div className="mb-6">
-                      <img
-                        src={post.imagePath}
-                        alt={post.imageAlt || post.title} // Fallback to title if imageAlt is not available
-                        className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-md"
-                      />
+                      <a href={post.imagePath} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={post.imagePath}
+                          alt={post.imageAlt || post.title} // Fallback to title if imageAlt is not available
+                          className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-md"
+                        />
+                      </a>
                     </div>
                   )}
                   
