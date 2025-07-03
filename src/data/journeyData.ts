@@ -22,16 +22,16 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "Started My Research Website"
   },
   {
-    "id": "14",
+    "id": "10",
     "date": "2024-07-22",
     "type": "text",
     "title": "Graduated Masters!",
     "content": "I just graduated with a Bachelor of Science in Microbiology degree. One chapter closes, with a bittersweet experience, and next one begins. Starting next week, I will be working towards my Postgrad degree at IISER Thiruvananthapuram.",
-    "imagePath": "/images/blog/MS.jpg",
+    "imagePath": "/images/journey/MS.jpg",
     "imageAlt": "MS Diploma"
   },
   {
-    "id": "5",
+    "id": "9",
     "date": "2024-05-02",
     "type": "text",
     "title": "Parkinson's Foundation Visiting Scholar Award",
@@ -40,15 +40,15 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "Parkinson's Foundation Award Letter"
   },
   {
-    "id": "13",
+    "id": "8",
     "date": "2023-05-29",
     "type": "text",
     "title": "MS Thesis - Done!",
-    "content": "I can't believe it!! I have completed, and successfully defended my MS Thesis (with an overall grade of 9.5/10!). This marks the completion of major portion of m Master's program, which I cleared with a aggregated average grade of 8.6/10. I am extremely thankful to Dr Poonam Thakur, my sueprvisor and mentor, and the super talented and helpful members of Thakur Lab. It simply would not have been possible without their support and guidance throughout! And my friends and family, of course. Nothing short of unconditional love and gratitude to all the folks.\n\nI am also glad to share that I will be extending my program and continuing my work at Thakur Lab. Things are looking bright ahead..",
+    "content": "I can't believe it!! I have completed, and successfully defended my MS Thesis (with an overall grade of 9.5/10!). This marks the completion of major portion of m Master's program, which I cleared with a aggregated average grade of 8.6/10. I am extremely thankful to Dr Poonam Thakur, my sueprvisor and mentor, and the super talented and helpful members of Thakur Lab. It simply would not have been possible without their support and guidance throughout! And my friends and family, of course. Nothing short of unconditional love and gratitude to all the folks.\r\n\r\nI am also glad to share that I will be extending my program and continuing my work at Thakur Lab. Things are looking bright ahead..",
     "imageAlt": "MS Thesis - Done!"
   },
   {
-    "id": "10",
+    "id": "1",
     "date": "2023-03-23",
     "type": "text",
     "title": "DBT JRF",
@@ -57,7 +57,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "DBT JRF Award Letter"
   },
   {
-    "id": "7",
+    "id": "13",
     "date": "2022-01-04",
     "type": "text",
     "title": "Member - Thakur Lab",
@@ -65,7 +65,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "Member - Thakur Lab"
   },
   {
-    "id": "8",
+    "id": "14",
     "date": "2021-10-27",
     "type": "text",
     "title": "Thakur Lab Rotation Internship",
@@ -73,7 +73,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "Thakur Lab Rotation Internship"
   },
   {
-    "id": "6",
+    "id": "11",
     "date": "2021-09-02",
     "type": "text",
     "title": "Khurana Lab Rotation Internship",
@@ -81,7 +81,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "Khurana Lab Rotation Internship"
   },
   {
-    "id": "4",
+    "id": "6",
     "date": "2021-07-05",
     "type": "text",
     "title": "LICB Rotation Internship",
@@ -89,7 +89,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "LICB Rotation Internship"
   },
   {
-    "id": "9",
+    "id": "12",
     "date": "2020-12-21",
     "type": "text",
     "title": "Joined Thakur Neurodegeneration Lab",
@@ -97,36 +97,32 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "Joined Thakur Neurodegeneration Lab"
   },
   {
-    "id": "11",
+    "id": "2",
     "date": "2020-07-30",
     "type": "text",
     "title": "Graduated Undergrad!",
     "content": "I just graduated with a Bachelor of Science in Microbiology degree. One chapter closes, with a bittersweet experience, and next one begins. Starting next week, I will be working towards my Postgrad degree at IISER Thiruvananthapuram.",
-    "imagePath": "/images/blog/BSC.jpg",
+    "imagePath": "/images/journey/BSC.jpg",
     "imageAlt": "BSc Diploma"
   },
   {
-    "id": "12",
+    "id": "7",
     "date": "2020-07-23",
     "type": "text",
     "title": "Joined IISER Thorivananthapuram",
-
     "content": "The uncertainty, the days of nervous foot tapping, and time for aimlessly roaming around is over. In these dark times of COVID-19 crisis, I have a small but significant, happy news to share. I have been offered a position in the integrated MSc-PhD program at Indian Institute of Science Education Research's Thiruvananthapuram and Kolkata units, as well as at the Indian Institute of Technology Kharagpur. And after a lot of brain wracking, I have decided to accept the offer at IISER Thiruvananthapuram!!\r\n\r\nBetter days ahead!",
-
     "imageAlt": "Joined IISER Thorivananthapuram"
   },
   {
-    "id": "3",
+    "id": "5",
     "date": "2020-03-16",
     "type": "text",
     "title": "IIT-JAM and JGEEBILS",
-
     "content": "I got a shock a couple of weeks back. But a happy one! I cleared JGEEBILS exam, organised by Tata Institute of Fundamental Research, and was invited to appear for the interview for their integrated MSc-PhD program! Soon after, came another awesome news- I cleared IIT Join Admissions Test for Master's Admissions, with a All India Rank of 57!\r\nI did panic and end up bombing my interviews at the TIFR, so I didn't get an offer. But I have learnt my lessons, and will be well prepared and confidently positive for the next set of interviews. Fingers crossed!",
-
     "imageAlt": "IIT-JAM and JGEEBILS"
   },
   {
-    "id": "2",
+    "id": "4",
     "date": "2019-12-19",
     "type": "text",
     "title": "IELTS",
@@ -135,7 +131,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "IELTS Scorecard"
   },
   {
-    "id": "1",
+    "id": "3",
     "date": "2019-11-28",
     "type": "text",
     "title": "GRE General/Biology",
