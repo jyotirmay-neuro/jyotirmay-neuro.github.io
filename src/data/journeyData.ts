@@ -12,10 +12,108 @@ export interface JourneyPost {
 
 export const journeyPosts: JourneyPost[] = [
   {
-    "id": "1",
+    "id": "15",
     "date": "2024-09-05",
     "type": "text",
     "title": "Started My Research Website",
     "content": "Excited to launch my new research website! This platform will help me share my work, connect with fellow researchers, and document my academic journey.\r\n\r\nLooking forward to sharing my thought, insights from my readings and research in neurosciences (and, more broadly, biological sciences), and recommendations of books/shows/movies as I encounter more of it."
+  },
+  {
+    "id": "10",
+    "date": "2024-07-22",
+    "type": "text",
+    "title": "Graduated Masters!",
+    "content": "![MS Diploma](/images/blog/MS.jpg)\r\nI just graduated with a Bachelor of Science in Microbiology degree. One chapter closes, with a bittersweet experience, and next one begins. Starting next week, I will be working towards my Postgrad degree at IISER Thiruvananthapuram."
+  },
+  {
+    "id": "9",
+    "date": "2024-05-02",
+    "type": "text",
+    "title": "Parkinson's Foundation Visiting Scholar Award",
+    "content": "![Parkinson's Foundation Award Letter](/images/journey/PF-letter.jpg)\r\nI am beyond excited and honoured to share that I have been awarded a Parkinson's Foundation's Visiting Scholar Award! This award will support a 3 month visit to the awesome laboratory of, the super talented, [Dr Kaue M Costa](https://www.kmcostalab.com) at University of Alabama Birmingham. A huge thanks to my mentor Dr Poonam, for recommending I make an application for this award and for supporting me through every step of the process, and Dr Kaue Costa, for graciously extending me an invite to the lab and for working tens of hours and helping me perfect every line and word written in the application. I cannot wait to work with him in-person and learn from him, as much as I can, the wide array of skills and knowledge he has acquired over the years."
+  },
+  {
+    "id": "8",
+    "date": "2023-05-29",
+    "type": "text",
+    "title": "MS Thesis - Done!",
+    "content": "I can't believe it!! I have completed, and successfully defended my MS Thesis (with an overall grade of 9.5/10!). This marks the completion of major portion of m Master's program, which I cleared with a aggregated average grade of 8.6/10. I am extremely thankful to Dr Poonam Thakur, my sueprvisor and mentor, and the super talented and helpful members of Thakur Lab. It simply would not have been possible without their support and guidance throughout! And my friends and family, of course. Nothing short of unconditional love and gratitude to all the folks.\r\n\r\nI am also glad to share that I will be extending my program and continuing my work at Thakur Lab. Things are looking bright ahead.."
+  },
+  {
+    "id": "1",
+    "date": "2023-03-23",
+    "type": "text",
+    "title": "DBT JRF",
+    "content": "![DBT JRF Award Letter](/images/journey/DBT.jpg)\r\nI am super stoked to share that I have cleared the Department of Biotechnology's Biotechnology Entrance Test (DBT-BET) under Category-I. And as such, will be getting a Junior Research Fellowship from DBT!"
+  },
+  {
+    "id": "13",
+    "date": "2022-01-04",
+    "type": "text",
+    "title": "Member - Thakur Lab",
+    "content": "I am beyond excited, alsmot overjoyed, to share that I have joined Thakur Neurodegeneration Lab for my Master's thesis work. Watch out for awesome science over the next months/years!"
+  },
+  {
+    "id": "14",
+    "date": "2021-10-27",
+    "type": "text",
+    "title": "Thakur Lab Rotation Internship",
+    "content": "The last few weeks at SCBL, and LICB before that, were superb and I have learnt so much from the excellent people of these labs! I am now moving on to my next rotation internship, which is the going to be at Thakur Neurodegeneration Lab. I have already been doing a reading internship at the lab, attending journal clubs and work presentations, and am super stoked to be getting into experimental work at the lab!"
+  },
+  {
+    "id": "11",
+    "date": "2021-09-02",
+    "type": "text",
+    "title": "Khurana Lab Rotation Internship",
+    "content": "I have just wrapped up rotation at the LICB, and I will be spending the next couple of weeks doing an internship at the Stem Cells Biology Laboratory (PI: Dr Satish Khurana). Looking forward to seeing and doing cool science, with Dr Satish (his lectures in the Human Physiology course were just fab), and his super talented PhD scholar (and soon to be Dr!) Atreyi."
+  },
+  {
+    "id": "6",
+    "date": "2021-07-05",
+    "type": "text",
+    "title": "LICB Rotation Internship",
+    "content": "I am super excited to be share that I will be spending the next 8 weeks doing an internship at the Laboratory of Immune Cell Biology (PI: Dr Srinivasa Murty Srinivasula). I am sure it will be a great few weeks learning from a veteran and powerhouse of academic research."
+  },
+  {
+    "id": "12",
+    "date": "2020-12-21",
+    "type": "text",
+    "title": "Joined Thakur Neurodegeneration Lab",
+    "content": "I am glad to join Dr Poonam Thakur's Lab (Thakur Neurodegeneration Lab) at IISER Thiruvananthapuram, as a reading intern. Looking forward to learning about Parkinson's Disease over the next few months."
+  },
+  {
+    "id": "2",
+    "date": "2020-07-30",
+    "type": "text",
+    "title": "Graduated Undergrad!",
+    "content": "![BSc Diploma](/images/blog/BSC.jpg)\r\nI just graduated with a Bachelor of Science in Microbiology degree. One chapter closes, with a bittersweet experience, and next one begins. Starting next week, I will be working towards my Postgrad degree at IISER Thiruvananthapuram."
+  },
+  {
+    "id": "7",
+    "date": "2020-07-23",
+    "type": "text",
+    "title": "Joined IISER Thorivananthapuram",
+    "content": "The uncertainty, the days of nervous foot tapping, and time for aimlessly roaming around is over. In these dark times of COVID-19 crisis, I have a small but significant, happy news to share. I have been offered a position in the integrated MSc-PhD program at Indian Institute of Science Education Research's Thiruvananthapuram and Kolkata units, as well as at the Indian Institute of Technology Kharagpur. And after a lot of brain wracking, I have decided to accept the offer at IISER Thiruvananthapuram!!\r\n\r\nBetter days ahead!"
+  },
+  {
+    "id": "5",
+    "date": "2020-03-16",
+    "type": "text",
+    "title": "IIT-JAM and JGEEBILS",
+    "content": "I got a shock a couple of weeks back. But a happy one! I cleared JGEEBILS exam, organised by Tata Institute of Fundamental Research, and was invited to appear for the interview for their integrated MSc-PhD program! Soon after, came another awesome news- I cleared IIT Join Admissions Test for Master's Admissions, with a All India Rank of 57!\r\nI did panic and end up bombing my interviews at the TIFR, so I didn't get an offer. But I have learnt my lessons, and will be well prepared and confidently positive for the next set of interviews. Fingers crossed!"
+  },
+  {
+    "id": "4",
+    "date": "2019-12-19",
+    "type": "text",
+    "title": "IELTS",
+    "content": "![IELTS Scorecard](/images/journey/IELTS.jpg)\r\nGot my IELTS score yesterday. I think I did well. Writing section could have been better. But a band 8.0 overall!!"
+  },
+  {
+    "id": "3",
+    "date": "2019-11-28",
+    "type": "text",
+    "title": "GRE General/Biology",
+    "content": "![GRE Scorecard](/images/journey/GRE.jpg)\r\nGot my GRE score recently. Scored a (decent) 322 in General, with a 160 in Verbal and a 162 in Quantitative Reasoning. In the Subject-Biology test, I scored a rather diasspointing 800. I definitely should have studied more on Ecology and Evolution (but I found it so boring!). Lesson learnt!"
   }
 ];

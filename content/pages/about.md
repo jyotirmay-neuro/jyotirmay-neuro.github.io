@@ -19,4 +19,4 @@ I believe that the most significant advances in neuroscience will emerge from th
 I am a strong advocate for collaborative and open science. I believe that sharing knowledge, mentoring junior colleagues, and engaging in rigorous scientific discourse are essential for both individual growth and the advancement of the field.
 
 
-**Always happy connect with others. Let's have deep discussions about the mysteries of this universe...**
+**Always happy to connect with others. Let's have deep discussions about the mysteries of this universe...**
