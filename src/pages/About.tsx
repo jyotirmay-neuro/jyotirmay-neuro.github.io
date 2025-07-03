@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, Users, BookOpen } from 'lucide-react';
+import { GraduationCap, Award } from 'lucide-react';
 import { pages } from '../data/pageData';
 
 const About: React.FC = () => {
