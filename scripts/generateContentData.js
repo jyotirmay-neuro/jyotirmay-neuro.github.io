@@ -165,13 +165,30 @@ function blogItemProcessor(file, filePath, frontmatter, content, index, categori
 
 function journeyItemProcessor(file, filePath, frontmatter, content, index) {
   const gitDate = getGitCommitDate(filePath);
+  let imagePath = frontmatter.image || undefined;
+  let imageAlt = frontmatter.title || 'Journey image'; // Default alt text
+  let processedContent = content.trim();
+
+  // Regex to find Markdown image: ![alt text](path)
+  const markdownImageRegex = /!\[(.*?)\]\((.*?)\)/;
+  const match = processedContent.match(markdownImageRegex);
+
+  if (match) {
+    imageAlt = match[1]; // Alt text
+    imagePath = match[2]; // Image path
+    // Remove the Markdown image syntax from the content
+    processedContent = processedContent.replace(markdownImageRegex, '').trim();
+  }
+
   return {
     id: (index + 1).toString(),
     date: frontmatter.date || gitDate,
     type: frontmatter.type || 'text',
     title: frontmatter.title || 'Update',
-    content: content.trim(), // Journey content is plain text
-    image: frontmatter.image || undefined
+    content: processedContent, // Content without the image Markdown
+    image: frontmatter.image || undefined, // Keep original frontmatter image if needed elsewhere
+    imagePath: imagePath, // Path for rendering
+    imageAlt: imageAlt // Alt text for rendering
   };
 }
 
@@ -304,7 +321,9 @@ export interface JourneyPost {
   type: 'text' | 'image-text';
   title: string;
   content: string;
-  image?: string;
+  image?: string; // Original frontmatter image
+  imagePath?: string; // Path to the image for rendering
+  imageAlt?: string; // Alt text for the image
 }
 
 export const journeyPosts: JourneyPost[] = ${JSON.stringify(journeyPosts, null, 2)};

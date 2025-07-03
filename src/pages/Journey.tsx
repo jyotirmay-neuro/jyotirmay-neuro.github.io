@@ -43,13 +43,15 @@ const Journey: React.FC = () => {
                   </h2>
                   
                   {/* Image (if exists) */}
-                  {post.image && (
+                  {post.imagePath && (
                     <div className="mb-6">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-md"
-                      />
+                      <a href={post.imagePath} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={post.imagePath}
+                          alt={post.imageAlt || post.title} // Fallback to title if imageAlt is not available
+                          className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-md"
+                        />
+                      </a>
                     </div>
                   )}
                   
@@ -66,11 +68,6 @@ const Journey: React.FC = () => {
         </div>
       </div>
       
-      {/* Load More (placeholder) */}
-      <div className="text-center mt-16">
-        <p className="text-gray-500 mb-6">More updates coming soon...</p>
-        <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto"></div>
-      </div>
     </div>
   );
 };
