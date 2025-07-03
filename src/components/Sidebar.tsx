@@ -80,7 +80,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, toggleSidebar }) => {
         {/* Toggle Button */}
         <button
           onClick={toggleSidebar}
-          className="absolute top-4 right-0 transform translate-x-1/2 bg-white border-2 border-gray-300 rounded-full p-1.5 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
+          className="absolute top-4 right-5 transform translate-x-1/2 bg-white border-2 border-gray-300 rounded-full p-1.5 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
           aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
           {isCollapsed ? (
