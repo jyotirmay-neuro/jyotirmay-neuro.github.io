@@ -18,7 +18,7 @@ export const journeyPosts: JourneyPost[] = [
     "date": "2024-09-05",
     "type": "text",
     "title": "Started My Research Website",
-    "content": "Excited to launch my new research website! This platform will help me share my work, connect with fellow researchers, and document my academic journey.\n\nLooking forward to sharing my thought, insights from my readings and research in neurosciences (and, more broadly, biological sciences), and recommendations of books/shows/movies as I encounter more of it.",
+    "content": "Excited to launch my new research website! This platform will help me share my work, connect with fellow researchers, and document my academic journey.\r\n\r\nLooking forward to sharing my thought, insights from my readings and research in neurosciences (and, more broadly, biological sciences), and recommendations of books/shows/movies as I encounter more of it.",
     "imageAlt": "Started My Research Website"
   },
   {
@@ -110,7 +110,9 @@ export const journeyPosts: JourneyPost[] = [
     "date": "2020-07-23",
     "type": "text",
     "title": "Joined IISER Thorivananthapuram",
-    "content": "The uncertainty, the days of nervous foot tapping, and time for aimlessly roaming around is over. In these dark times of COVID-19 crisis, I have a small but significant, happy news to share. I have been offered a position in the integrated MSc-PhD program at Indian Institute of Science Education Research's Thiruvananthapuram and Kolkata units, as well as at the Indian Institute of Technology Kharagpur. And after a lot of brain wracking, I have decided to accept the offer at IISER Thiruvananthapuram!!\n\nBetter days ahead!",
+
+    "content": "The uncertainty, the days of nervous foot tapping, and time for aimlessly roaming around is over. In these dark times of COVID-19 crisis, I have a small but significant, happy news to share. I have been offered a position in the integrated MSc-PhD program at Indian Institute of Science Education Research's Thiruvananthapuram and Kolkata units, as well as at the Indian Institute of Technology Kharagpur. And after a lot of brain wracking, I have decided to accept the offer at IISER Thiruvananthapuram!!\r\n\r\nBetter days ahead!",
+
     "imageAlt": "Joined IISER Thorivananthapuram"
   },
   {
@@ -118,7 +120,9 @@ export const journeyPosts: JourneyPost[] = [
     "date": "2020-03-16",
     "type": "text",
     "title": "IIT-JAM and JGEEBILS",
-    "content": "I got a shock a couple of weeks back. But a happy one! I cleared JGEEBILS exam, organised by Tata Institute of Fundamental Research, and was invited to appear for the interview for their integrated MSc-PhD program! Soon after, came another awesome news- I cleared IIT Join Admissions Test for Master's Admissions, with a All India Rank of 57!\nI did panic and end up bombing my interviews at the TIFR, so I didn't get an offer. But I have learnt my lessons, and will be well prepared and confidently positive for the next set of interviews. Fingers crossed!",
+
+    "content": "I got a shock a couple of weeks back. But a happy one! I cleared JGEEBILS exam, organised by Tata Institute of Fundamental Research, and was invited to appear for the interview for their integrated MSc-PhD program! Soon after, came another awesome news- I cleared IIT Join Admissions Test for Master's Admissions, with a All India Rank of 57!\r\nI did panic and end up bombing my interviews at the TIFR, so I didn't get an offer. But I have learnt my lessons, and will be well prepared and confidently positive for the next set of interviews. Fingers crossed!",
+
     "imageAlt": "IIT-JAM and JGEEBILS"
   },
   {
