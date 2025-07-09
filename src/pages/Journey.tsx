@@ -56,11 +56,10 @@ const Journey: React.FC = () => {
                   )}
                   
                   {/* Content */}
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-700 leading-relaxed">
-                      {post.content}
-                    </p>
-                  </div>
+                  <div
+                    className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
+                  />
                 </article>
               </div>
             </div>
