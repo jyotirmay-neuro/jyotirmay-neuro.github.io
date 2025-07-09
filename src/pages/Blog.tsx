@@ -49,9 +49,10 @@ const Blog: React.FC = () => {
                     </Link>
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {post.excerpt}
-                  </p>
+                  <p
+                    className="text-gray-600 mb-4 leading-relaxed prose"
+                    dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                  />
                   
                   <div className="flex flex-wrap items-center justify-between">
                     <div className="flex flex-wrap gap-2 mb-4 lg:mb-0">
