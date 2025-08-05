@@ -14,7 +14,15 @@ export interface JourneyPost {
 
 export const journeyPosts: JourneyPost[] = [
   {
-    "id": "15",
+    "id": "12",
+    "date": "2025-08-01",
+    "type": "text",
+    "title": "Research Associate in Ray Lab at CHINTA",
+    "content": "I am excited to share that I have started working as a Research Associate in the lab of [Dr Subhasis Ray](https://rayslab.github.io).\r\nI will be working on understanding the neural mechanisms of multisensory integration in insects (primarily cockroach), using some clever and state-of-the-art behavioural paradigms (Yes! Cockroaches are pretty smart too!) and intracellular electrode recordings in live subjects.\r\nLook out for some awesome science coming up!",
+    "imageAlt": "Research Associate in Ray Lab at CHINTA"
+  },
+  {
+    "id": "16",
     "date": "2024-09-05",
     "type": "text",
     "title": "Started My Research Website",
@@ -57,7 +65,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "DBT JRF Award Letter"
   },
   {
-    "id": "13",
+    "id": "14",
     "date": "2022-01-04",
     "type": "text",
     "title": "Member - Thakur Lab",
@@ -65,7 +73,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "Member - Thakur Lab"
   },
   {
-    "id": "14",
+    "id": "15",
     "date": "2021-10-27",
     "type": "text",
     "title": "Thakur Lab Rotation Internship",
@@ -89,7 +97,7 @@ export const journeyPosts: JourneyPost[] = [
     "imageAlt": "LICB Rotation Internship"
   },
   {
-    "id": "12",
+    "id": "13",
     "date": "2020-12-21",
     "type": "text",
     "title": "Joined Thakur Neurodegeneration Lab",
