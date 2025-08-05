@@ -2,7 +2,7 @@
 title: "About Me"
 ---
 
-Hi! I am a recent postgraduate researcher passionate about neuroscience. My work focuses on bridging molecular, systems, and computational approaches to unravel the fundamental principles of neural function. With a strong background in both experimental neurobiology and computational methods, my goal is to contribute to a deeper understanding of the brain's complexities.
+Hi! I am a Research Associate in the lab of Dr. Subhasis Ray at CHINTA, TCG CREST, where I'm delving into the neural mechanisms behind multisensory integration in insects—particularly cockroaches. This fascinating research explores how these resilient creatures seamlessly combine sensory inputs like vision, touch, and olfaction to navigate complex environments, offering profound insights into efficient brain processing that could form the foundation of treatments for sensory disorders in humans, and even inspire advancements in robotics. As a recent postgraduate passionate about neuroscience, my work bridges molecular, systems, and computational approaches to unravel the fundamental principles of neural function. With a strong background in both experimental neurobiology and computational methods, my goal is to contribute to a deeper understanding of the brain's complexities, unlocking potential breakthroughs in how multisensory cues shape behavior and cognition across species.
 
 **I am actively seeking PhD positions where I can apply my interdisciplinary skills to investigate key questions in neuroscience.**
 
