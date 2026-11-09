@@ -25,3 +25,10 @@ dist-ssr
 .env
 
 .code-graph/
+
+# Local blog drafting pipeline (never commit)
+.blog-pipeline/
+
+# Claude / AI tooling (never commit)
+.claude/
+CLAUDE.md
